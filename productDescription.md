@@ -1,8 +1,16 @@
 # BFD: Product Description
 A description of the product used for planning the data model of the system and identify the services and user flows necessary for this product.
 
+In this document I will provide early ideas and details to describe my vision of this system, its features, and capabilities. This is by no means a proposal of what the early versions of this system must be delivered with.
+
+We can update this document as we develop the system or we can draft up new descriptions and version them. In laying out these ideas I hope to provide a starting point for ideating on the sort of system I would like to see come to life.
+
 ## Table of Contents
 * [Principal Concepts](#principal-concepts)
+* [Actors](#actors)
+  * [User](#user)
+* [System](#system)
+  * [Blog](#blog)
 
 ## Principal Concepts
 * A _theme_ does not apply to a _blog_ but to individual blog _posts_ and _pages_.
@@ -24,3 +32,28 @@ A description of the product used for planning the data model of the system and 
   * Be versioned (semver).
   * Be added to a _post_ or a _page_.
 
+## Actors
+The _actors_ are the entities that will interact with this blog system. In this chapter we will describe them. Today there is only one type of _actor_: the _[user](#user)_. In the future perhaps _commenters_ or _subscribers_ may be added to this system.
+
+### User
+A _user_ is an _[actor](#actors)_ who has created an account in the system.
+
+A _user_ has:
+* An email address
+* A password
+* A public id
+* A user name
+* A display name
+
+A _user_ can perform, among others, the following actions:
+* Create _blogs_
+* Be given access to a _blog_
+* Given the necessary _roles_:
+  * Publish _pages_ and _posts_ to a _blog_
+  * Create a _draft_ of a _page_ or _post_ for a _blog_
+  * Edit _pages_, _posts_, and _drafts_ to a _blog_
+  * Configure a _blog_
+  * Submit a _post_ or _page_ for publication
+  * Approve a pending _post_ or _page_
+  * Request changes to a _post_ or _page_
+  * Publish updates to _pages_ and _posts_
