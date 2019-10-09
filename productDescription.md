@@ -11,6 +11,9 @@ We can update this document as we develop the system or we can draft up new desc
   * [Actors](#actors)
     * [User](#user)
   * [Blog](#blog)
+  * [Roles](#roles)
+    * [Owner](#owner)
+    * [Administrator](#administrator)
 
 ## Principal Concepts
 * A _theme_ does not apply to a _[blog](#blog)_ but to individual blog _posts_ and _pages_.
@@ -82,3 +85,22 @@ A _blog_ has (or can have):
 * Future ideas?
   * Feeds (RSS, etc)
   * Plugins
+
+### Roles
+_[Users](#user)_ can be assigned _roles_ within a _[blog](#blog)_. Each _role_ comes with different degrees of privileges.
+
+#### Owner
+A blog can have one or more _owners_. _Owners_ have all privileges available from all roles in addition to _owner_-specific privileges.
+
+Owner-specific privileges:
+* Rename the blog
+* Manage blog configurations
+  * Domain configuration?
+* Add, remove _[owner roles](#roles)_ 
+* Probably more in the future as I mature this product idea
+
+#### Administrator
+An _administrator_ has privileges to manage the blog.
+
+* Manage users on the blog
+  * Add, remove _[user roles](#roles)_ (except for _[owners](#owner)_)
