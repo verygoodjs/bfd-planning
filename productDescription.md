@@ -7,9 +7,9 @@ We can update this document as we develop the system or we can draft up new desc
 
 ## Table of Contents
 * [Principal Concepts](#principal-concepts)
-* [Actors](#actors)
-  * [User](#user)
 * [System](#system)
+  * [Actors](#actors)
+    * [User](#user)
   * [Blog](#blog)
 
 ## Principal Concepts
@@ -32,10 +32,13 @@ We can update this document as we develop the system or we can draft up new desc
   * Be versioned (semver).
   * Be added to a _post_ or a _page_.
 
-## Actors
+## System
+Description of the components of the entire blog system.
+
+### Actors
 The _actors_ are the entities that will interact with this blog system. In this chapter we will describe them. Today there is only one type of _actor_: the _[user](#user)_. In the future perhaps _commenters_ or _subscribers_ may be added to this system.
 
-### User
+#### User
 A _user_ is an _[actor](#actors)_ who has created an account in the system.
 
 A _user_ has:
@@ -57,9 +60,6 @@ A _user_ can perform, among others, the following actions:
   * Approve a pending _post_ or _page_
   * Request changes to a _post_ or _page_
   * Publish updates to _pages_ and _posts_
-
-## System
-Description of the components of the entire blog system.
 
 ### Blog
 A _blog_ is created by a _[user](#user)_.
