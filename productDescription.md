@@ -13,8 +13,8 @@ We can update this document as we develop the system or we can draft up new desc
   * [Blog](#blog)
 
 ## Principal Concepts
-* A _theme_ does not apply to a _blog_ but to individual blog _posts_ and _pages_.
-  * A _blog_ can have a default _theme_ set, but this should be configurable at the _post_ and _page_ level.
+* A _theme_ does not apply to a _[blog](#blog)_ but to individual blog _posts_ and _pages_.
+  * A _[blog](#blog)_ can have a default _theme_ set, but this should be configurable at the _post_ and _page_ level.
 * There are multiple types of _assets_ that can be utilized in a _post_ or a _page_.
   * _Media assets_ are managed in a gallery
     * _Image_, _video_, and _audio_ assets can be uploaded and managed within the gallery
@@ -46,14 +46,39 @@ A _user_ has:
 * A display name
 
 A _user_ can perform, among others, the following actions:
-* Create _blogs_
-* Be given access to a _blog_
+* Create _[blogs](#blog)_
+* Be given access to a _[blog](#blog)_
 * Given the necessary _roles_:
-  * Publish _pages_ and _posts_ to a _blog_
-  * Create a _draft_ of a _page_ or _post_ for a _blog_
-  * Edit _pages_, _posts_, and _drafts_ to a _blog_
-  * Configure a _blog_
+  * Publish _pages_ and _posts_ to a _[blog](#blog)_
+  * Create a _draft_ of a _page_ or _post_ for a _[blog](#blog)_
+  * Edit _pages_, _posts_, and _drafts_ to a _[blog](#blog)_
+  * Configure a _[blog](#blog)_
   * Submit a _post_ or _page_ for publication
   * Approve a pending _post_ or _page_
   * Request changes to a _post_ or _page_
   * Publish updates to _pages_ and _posts_
+
+## System
+Description of the components of the entire blog system.
+
+### Blog
+A _blog_ is created by a _[user](#user)_.
+
+A _blog_ has (or can have):
+* A title (editable)
+* An ID (editable)
+* A creator (a _[user](#user)_)
+  * This is immutable upon creation
+* One or more _[users](#user)_
+  * _[Users](#user)_ added to the _blog_ have _roles_
+* A public site
+* A _management portal_
+* _Pages_
+* _Posts_
+* _Tags_ which can be applied to _pages_ and _posts_
+* Base _themes_ (one for _pages_ and one for _posts_)
+  * Base _themes_ are configurable with the appropriate roles
+  * These are the _themes_ applied by default when creating a _page_ or _post_
+* Future ideas?
+  * Feeds (RSS, etc)
+  * Plugins
