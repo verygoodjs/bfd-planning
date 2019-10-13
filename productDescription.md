@@ -14,6 +14,9 @@ We can update this document as we develop the system or we can draft up new desc
   * [Roles](#roles)
     * [Owner](#owner)
     * [Administrator](#administrator)
+    * [Developer](#developer)
+    * [Editor](#editor)
+    * [Contributor](#contributor)
 
 ## Principal Concepts
 * A _theme_ does not apply to a _[blog](#blog)_ but to individual blog _posts_ and _pages_.
@@ -90,17 +93,49 @@ A _blog_ has (or can have):
 _[Users](#user)_ can be assigned _roles_ within a _[blog](#blog)_. Each _role_ comes with different degrees of privileges.
 
 #### Owner
-A blog can have one or more _owners_. _Owners_ have all privileges available from all roles in addition to _owner_-specific privileges.
+A _[blog](#blog)_ can have one or more _owners_. _Owners_ have all privileges available from all _[roles](#roles)_ in addition to _owner_-specific privileges.
 
 Owner-specific privileges:
 * Rename the blog
-* Manage blog configurations
-  * Domain configuration?
 * Add, remove _[owner roles](#roles)_ 
-* Probably more in the future as I mature this product idea
 
 #### Administrator
-An _administrator_ has privileges to manage the blog.
+An _administrator_ has privileges to manage the _[blog](#blog)_. An _administrator_ has all privileges available from all _[roles](#roles)_ in addition to _administrator_-specific privileges except _[owner](#owner)_ privileges.
 
-* Manage users on the blog
+Administrator-specific privileges:
+* Manage _[users](#users)_ on the _[blog](#blog)_
   * Add, remove _[user roles](#roles)_ (except for _[owners](#owner)_)
+
+#### Developer
+A _developer_ has privileges to manage _plugins_, _themes_, and configurations for a _[blog](#blog)_. A developer has all privileges available from all _[roles](#roles)_ in addition to _developer_-specific privileges with the exception of _[owner](#owner)_ and _[administrator](#administrator)_ privileges.
+
+Developer-specific privileges:
+* Manage _plugins_, _themes_, and _tags_
+  * Install
+  * Edit
+  * Remove
+* Manage blog configurations
+  * Domain configuration?
+
+#### Editor
+An _editor_ has privileges to manage _posts_ and _pages_. They have the rights to publish content.
+
+Editor-specific privileges:
+* Manage _posts_ and _pages_
+  * Create a _draft_
+  * Submit a _draft_
+  * Request changes
+  * Edit
+  * Publish
+  * Unpublish
+  * Delete
+
+#### Contributor
+A _contributor_ has privileges to create and submit _posts_ and _pages_.
+
+Contributor-specific privileges:
+* Limited management of _posts_ and _pages_
+  * Create a _draft_
+  * Submit a _draft_
+  * Request changes
+  * Edit a _draft_
