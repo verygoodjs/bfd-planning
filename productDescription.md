@@ -15,6 +15,7 @@ We can update this document as we develop the system or we can draft up new desc
     * [Post](#post)
     * [Theme](#theme)
     * [Tag](#tag)
+    * [Management Portal](#management-portal)
   * [Role](#role)
     * [Owner](#owner)
     * [Administrator](#administrator)
@@ -82,7 +83,7 @@ A _blog_ has (or can have):
 * One or more _[users](#user)_
   * _[Users](#user)_ added to the _blog_ have _[roles](#role)_
 * A public site
-* A _management portal_
+* A _[management portal](#management-portal)_
 * _[Tags](#tag)_
 * _[Pages](#page)_
 * _[Posts](#post)_
@@ -95,7 +96,7 @@ A _blog_ has (or can have):
   * Plugins
 
 #### Page
-A _page_ is hosted at a configured url endpoint on the _[blog](#blog)_ domain. The content of a _page_ is managed through the _management portal_.
+A _page_ is hosted at a configured url endpoint on the _[blog](#blog)_ domain. The content of a _page_ is managed through the _[management portal](#management-portal)_.
 
 A _page_ can be in one of two states:
 * Published
@@ -155,6 +156,48 @@ _Tags_ can be:
 * Edited: title or color
 * Deleted
 
+#### Management Portal
+Each _[blog](#blog)_ has a _management portal_. This _portal_ is the interface through which _[users](#user)_ can manage the _[blog](#blog)_ system itself.
+
+Given the appropriate _[roles](#role)_ a _[user](#user)_ can user the _management portal_ to:
+* Manage _[blog](#blog)_
+  * Manage domain
+  * Update Title
+* Manage your user account?
+* Manage _[users](#user)_
+  * Invite
+  * Manage _[roles](#role)_
+  * Remove/Delete
+  * Search
+* Manage _[pages](#page)_ and _[posts](#post)_
+  * Create (_[draft](#draft)_)
+  * Edit
+  * Approve
+  * Comment
+  * Publish
+  * Unpublish
+  * Delete (with history)
+  * Search
+* Manage _[themes](#theme)_
+  * Create/Upload?
+  * Update (upload/edit?)
+    * Manage versions (update/downdate)
+  * Remove?
+    * Actually, is theme management necessary at a _[blog](#blog)_ level, or should it be entirely managed through _[pages](#page)_ and _[posts](#post)_? What would that look like?
+  * Search
+* Manage _[tags](#tag)_
+  * Create
+  * Edit
+  * Delete?
+  * View
+    * _[Pages](#page)_ and _[posts](#post)_ that have the tag applied
+  * Search
+* Manage preferences
+  * Template format for displaying dates/times in search results
+  * Search results per page
+  * Toggle infinite scroll?
+  * Themes applied to _management portal_ CMS pages
+  * Etc.
 
 ### Role
 _[Users](#user)_ can be assigned _roles_ within a _[blog](#blog)_. Each _role_ comes with different degrees of privileges.
