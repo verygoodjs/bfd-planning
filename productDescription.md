@@ -14,6 +14,7 @@ We can update this document as we develop the system or we can draft up new desc
     * [Page](#page)
     * [Post](#post)
     * [Theme](#theme)
+    * [Tag](#tag)
   * [Role](#role)
     * [Owner](#owner)
     * [Administrator](#administrator)
@@ -82,6 +83,7 @@ A _blog_ has (or can have):
   * _[Users](#user)_ added to the _blog_ have _[roles](#role)_
 * A public site
 * A _management portal_
+* _[Tags](#tag)_
 * _[Pages](#page)_
 * _[Posts](#post)_
 * _Tags_ which can be applied to _[pages](#page)_ and _[posts](#post)_
@@ -104,6 +106,7 @@ A _page_ has:
 * A date published
 * Dates edited
 * A version history
+* 0 or more _[tags](#tag)_
 
 #### Post
 A _post_ is hosted at a dynamically generated and programatically managed URL, sequentially ordered by date it was first publicly published. All _posts_ should live under the same URL path or subdomain. All _posts_ are programatically linked to each other, much like a linked list, with a previous and next _post_.
@@ -117,6 +120,7 @@ A _post_ has:
 * A date published
 * Dates edited
 * A version history
+* 0 or more _[tags](#tag)_
 
 #### Draft
 A _draft_ is a _[post](#post)_ or _[page](#page)_, or a new version of either, that is awaiting publishing.
@@ -138,6 +142,19 @@ A _theme_:
 * Dictates a schema of dynamic content it needs to render the _[page](#page)_ or _[post](#post)_
   * This schema dictates the name of the fields as well as the type of data each field accepts
   * The types of fields that may be accepted needs to be ironed out
+
+#### Tag
+Each _tag_ is a unique string tracked in the _[blog](#blog)_. _Tags_ can be applied to _[pages](#page)_ and _[posts](#post)_ for categorization purposes. A _[user](#user)_ should be able to access _[pages](#page)_ and _[posts](#post)_ by _tag_.
+
+_Tags_ have:
+* A title (string)
+* A color (hex code)
+
+_Tags_ can be:
+* Created
+* Edited: title or color
+* Deleted
+
 
 ### Role
 _[Users](#user)_ can be assigned _roles_ within a _[blog](#blog)_. Each _role_ comes with different degrees of privileges.
