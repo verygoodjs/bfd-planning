@@ -10,6 +10,7 @@ We can update this document as we develop the system or we can draft up new desc
 * [System](#system)
   * [Actor](#actor)
     * [User](#user)
+    * [Account Portal](#account-portal)
   * [Blog](#blog)
     * [Page](#page)
     * [Post](#post)
@@ -71,6 +72,18 @@ A _user_ can perform, among others, the following actions:
   * Approve a pending _[post](#post)_ or _[page](#page)_
   * Request changes to a _[post](#post)_ or _[page](#page)_
   * Publish updates to _[pages](#page)_ and _[posts](#post)_
+
+#### Account Portal
+A _[user](#user)_ can manage their own account in the _account portal_.
+
+Through the _account portal_ a _[user](#user)_ can:
+* Edit their name
+* Update their email
+* Set up MFA?
+* Create _[blogs](#blog)_
+* View the _[blogs](#blog)_ they belong to
+* Manage _[blogs](#blog)_ they are owners of: delete
+* Log into a _[blog's](#blog)_ _[management portal](#management-portal)_
 
 ### Blog
 A _blog_ is created by a _[user](#user)_.
